@@ -1,0 +1,141 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralindia"
+        },
+        "subnetName": {
+            "value": "subnet01"
+        },
+        "virtualNetworkName": {
+            "value": "vnet-centralindia-1"
+        },
+        "networkInterfaceName": {
+            "value": "app01421"
+        },
+        "enableAcceleratedNetworking": {
+            "value": false
+        },
+        "networkSecurityGroupName": {
+            "value": "App01-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "virtualMachineName": {
+            "value": "App01"
+        },
+        "virtualMachineComputerName": {
+            "value": "App01"
+        },
+        "virtualMachineRG": {
+            "value": "3tierRG"
+        },
+        "virtualMachineZone": {
+            "value": [
+                "1"
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2ats_v2"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "nicDeleteOption": {
+            "value": "Detach"
+        },
+        "securityType": {
+            "value": "Standard"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByPlatform"
+        },
+        "enablePeriodicAssessment": {
+            "value": "ImageDefault"
+        },
+        "enableHotpatching": {
+            "value": true
+        },
+        "rebootSetting": {
+            "value": "IfRequired"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "vnetLocation": {
+            "value": "centralindia"
+        },
+        "vnetExtendedLocation": {
+            "value": {}
+        },
+        "vnetVirtualNetworkName": {
+            "value": "vnet-centralindia-1"
+        },
+        "vnetTagsByResource": {
+            "value": {}
+        },
+        "vnetProperties": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "subnet01",
+                        "properties": {
+                            "addressPrefixes": [
+                                "10.0.1.0/24"
+                            ],
+                            "ipamPoolPrefixAllocations": []
+                        }
+                    }
+                ],
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.0.0.0/16"
+                    ]
+                }
+            }
+        },
+        "vnetNatGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewayPublicIpAddressesNewNames": {
+            "value": []
+        },
+        "vnetNetworkSecurityGroupsNew": {
+            "value": []
+        },
+        "vnetResourceGroupName": {
+            "value": "3tierRG"
+        },
+        "vnetDeploymentName": {
+            "value": "vnetcentralindiaTemplateDeployment1789799645296"
+        }
+    }
+}
